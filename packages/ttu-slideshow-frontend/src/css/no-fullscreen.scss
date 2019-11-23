@@ -1,0 +1,50 @@
+body {
+  font-weight: normal;
+}
+
+.fullscreen-only {
+  display: none;
+}
+
+#slideshow {
+  border: 2px solid red;
+  padding: 0.25em;
+}
+
+.slide {
+  display: inline-block;
+  position: relative;
+}
+
+$activeColor: deepskyblue;
+$inactiveColor: gray;
+
+.slide label {
+  position: absolute;
+  left: 0;
+  top: 0;
+  padding: 0.25em;
+  background-color: $activeColor;
+  opacity: 0.65;
+}
+
+.slide {
+  max-width: 30%;
+  max-height: 200px;
+  margin: 0.2em;
+  border: 3px solid transparent;
+}
+
+.slide img {
+  max-width: 100%;
+  max-height: 200px;
+}
+
+.active {
+  border: 3px solid $activeColor;
+}
+
+.inactive label {
+  background-color: $inactiveColor;
+  opacity: 0.75;
+}

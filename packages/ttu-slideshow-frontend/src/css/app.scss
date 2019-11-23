@@ -1,0 +1,40 @@
+@media all and (display-mode: fullscreen) {
+  @import "./fullscreen.scss";
+}
+
+@media not all and (display-mode: fullscreen) {
+  @import "./no-fullscreen.scss";
+}
+
+#navigator-toolbox[fullscreenShouldAnimate] {
+  transition: none !important;
+}
+
+body {
+  font-weight: bold;
+  background-color: black;
+  color: white;
+}
+
+code {
+  font-weight: normal;
+}
+
+#settings {
+  border: 2px solid black;
+  padding: 0.5em;
+  margin-bottom: 1em;
+}
+
+#settings h1 {
+  margin-top: 0;
+  text-transform: uppercase;
+  color: lightgray;
+}
+
+.highlight {
+  background-color: yellow;
+  color: black;
+  padding: 0.1em;
+  font-weight: normal;
+}

@@ -1,0 +1,20 @@
+{
+  "compilerOptions": {
+    "target": "es6",
+    "module": "commonjs",
+    "jsx": "react",
+    "downlevelIteration": true,
+    "moduleResolution": "node",
+    "esModuleInterop": true,
+    "stripInternal": true,
+    "strict": true,
+    "forceConsistentCasingInFileNames": true,
+    "declaration": false,
+    "sourceMap": true,
+    "baseUrl": "../node_modules",
+    "paths": {
+      "@/*": ["../src/*"]
+    }
+  },
+  "exclude": []
+}

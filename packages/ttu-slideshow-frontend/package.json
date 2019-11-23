@@ -1,0 +1,48 @@
+{
+  "name": "ttu-slideshow-frontend",
+  "version": "1.0.0",
+  "description": "The frontend for the ttu-slideshow application",
+  "main": "lib/index.js",
+  "scripts": {
+    "clean": "rimraf dist",
+    "dev": "npm run start",
+    "start": "cross-env NODE_ENV=development webpack-dev-server",
+    "build": "npm run clean && webpack"
+  },
+  "author": "Kyle Ratti",
+  "license": "GPL-3.0-or-later",
+  "dependencies": {
+    "@types/websocket": "^1.0.0",
+    "dotenv-webpack": "^1.7.0",
+    "react": "^16.10.0",
+    "react-dom": "^16.10.0",
+    "react-transition-group": "^4.3.0",
+    "rimraf": "^3.0.0",
+    "ttu-slideshow-types": "file:../ttu-slideshow-types",
+    "websocket": "^1.0.30"
+  },
+  "devDependencies": {
+    "@types/react": "^16.9.3",
+    "@types/react-dom": "^16.9.1",
+    "@types/react-image-gallery": "^0.8.4",
+    "@types/react-router-dom": "^5.1.0",
+    "@types/react-transition-group": "^4.2.3",
+    "cross-env": "^6.0.0",
+    "css-loader": "^3.2.0",
+    "dotenv": "^8.1.0",
+    "file-loader": "^4.2.0",
+    "html-webpack-plugin": "^3.2.0",
+    "piexifjs": "^1.0.6",
+    "sass": "^1.22.12",
+    "sass-loader": "^8.0.0",
+    "source-map-loader": "^0.2.4",
+    "style-loader": "^1.0.0",
+    "ts-loader": "^6.2.0",
+    "ts-node": "^8.4.1",
+    "ts-node-dev": "^1.0.0-pre.43",
+    "typescript": "^3.6.3",
+    "webpack": "^4.41.0",
+    "webpack-cli": "^3.3.9",
+    "webpack-dev-server": "^3.8.1"
+  }
+}

@@ -1,0 +1,76 @@
+import express from "express";
+import http from "http";
+import { MessageType, SocketMessage } from "ttu-slideshow-types";
+import WebSocket from "ws";
+
+export class WebServer {
+  private readonly app = express();
+  private readonly port = Number(process.env.PORT || 45454);
+  private readonly server: http.Server;
+  private readonly wss: WebSocket.Server;
+  private images: string[] = [];
+
+  constructor() {
+    let server = http.createServer(this.app);
+    this.server = server;
+    this.wss = new WebSocket.Server({ server });
+  }
+
+  private removeImage(image: string) {
+    const index = this.images.indexOf(image);
+    this.images.splice(index, 1);
+  }
+
+  broadcast(config: SocketMessage) {
+    this.wss.clients.forEach(client => {
+      client.send(JSON.stringify(config));
+    });
+  }
+
+  sendImageRemoved(image: string) {
+    if (this.images.indexOf(image) !== -1) {
+      this.removeImage(image);
+    }
+
+    return this.broadcast({
+      type: MessageType.DeleteImage,
+      data: image
+    });
+  }
+
+  sendImageAdded(image: string) {
+    this.images.push(image);
+
+    return this.broadcast({
+      type: MessageType.NewImage,
+      data: image
+    });
+  }
+
+  sendAll(ws: WebSocket) {
+    return ws.send(
+      JSON.stringify({
+        type: MessageType.Full,
+        data: this.images
+      })
+    );
+  }
+
+  start() {
+    this.app.use("/img/", express.static(process.env.WATCH_DIR));
+
+    this.wss.on("connection", ws => {
+      this.sendAll(ws);
+    });
+
+    this.server.listen(this.port, () => {
+      console.log(
+        `Listening for HTTP requests on http://127.0.0.1:${this.port}`
+      );
+
+      console.log(
+        `NOTE: Server is only listening for HTTP requests, _NOT_ HTTPS`
+      );
+    });
+  }
+}

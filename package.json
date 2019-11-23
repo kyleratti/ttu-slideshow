@@ -1,0 +1,22 @@
+{
+  "name": "ttu-slideshow",
+  "version": "1.0.0",
+  "description": "Full application for the TTU Sports Slideshow web-app",
+  "main": "index.js",
+  "scripts": {
+    "postinstall": "lerna bootstrap"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/kyleratti/ttu-slideshow.git"
+  },
+  "author": "Kyle Ratti",
+  "license": "GPL-3.0-or-later",
+  "bugs": {
+    "url": "https://github.com/kyleratti/ttu-slideshow/issues"
+  },
+  "homepage": "https://github.com/kyleratti/ttu-slideshow#readme",
+  "devDependencies": {
+    "lerna": "^3.19.0"
+  }
+}
