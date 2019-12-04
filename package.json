@@ -2,9 +2,10 @@
   "name": "ttu-slideshow",
   "version": "1.0.0",
   "description": "Full application for the TTU Sports Slideshow web-app",
-  "main": "index.js",
   "scripts": {
-    "postinstall": "lerna bootstrap"
+    "postinstall": "lerna bootstrap",
+    "deploy": "lerna run deploy",
+    "start-server": "lerna run start-server"
   },
   "repository": {
     "type": "git",
