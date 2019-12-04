@@ -11,7 +11,11 @@ export const webServer = new WebServer();
 export const watcher = new Watcher(watchDir);
 
 function run() {
-  webServer.start();
+  try {
+    webServer.start();
+  } catch (e) {
+    throw `Fatal error starting webserver: ${e}`;
+  }
 
   if (fs.existsSync(watchDir)) {
     watcher.start();
