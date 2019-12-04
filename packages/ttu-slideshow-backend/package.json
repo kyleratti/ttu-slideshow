@@ -5,6 +5,9 @@
   "main": "lib/index.js",
   "scripts": {
     "watch": "tsc -p src -w",
+    "clean": "rimraf lib/",
+    "prebuild": "npm run clean",
+    "build": "tsc -p src",
     "start-server": "node lib/index.js"
   },
   "author": "Kyle Ratti",
