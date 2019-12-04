@@ -1,8 +1,9 @@
 import express from "express";
+import fs from "fs";
 import http from "http";
+import { resolve } from "path";
 import { MessageType, SocketMessage } from "ttu-slideshow-types";
 import WebSocket from "ws";
-import { resolve } from "path";
 
 export class WebServer {
   private readonly app = express();
@@ -54,14 +55,20 @@ export class WebServer {
   start() {
     this.app.use("/img/", express.static(process.env.WATCH_DIR));
 
-    if (
-      process.env.NODE_ENV &&
-      process.env.NODE_ENV.toLowerCase() === "production"
-    ) {
-      const distDir = resolve("../ttu-slideshow-frontend/dist/");
-      console.log(`Production detected; serving '${distDir}'`);
-      this.app.use("/", express.static(distDir));
-    }
+    const packagesDir = resolve(process.env.PACKAGES_DIR);
+
+    if (!packagesDir) throw `Environment variable PACKAGES_DIR is not set`;
+
+    if (!fs.existsSync(packagesDir))
+      throw `PACKAGES_DIR does not exist!! ${packagesDir}`;
+
+    const distDir = resolve(packagesDir, "ttu-slideshow-frontend/dist/");
+
+    if (!fs.existsSync(distDir))
+      throw `Production frontend not found (do you need to run install/update?): ${distDir}`;
+
+    console.log(`Production detected; serving '${distDir}'`);
+    this.app.use("/", express.static(distDir));
 
     let server = http.createServer(this.app);
     this.server = server;
