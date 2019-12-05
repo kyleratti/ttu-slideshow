@@ -2,7 +2,7 @@
 git pull
 
 set /p update_packages_dir="WOULD YOU LIKE TO UPDATE THE PACKAGES_DIR VAR? (y/n) "
-if %update_packages_dir% == "y" (  
+if %update_packages_dir% == y (  
   echo Your packages directory will be something like:
   echo C:\Users\myuser\Apps\ttu-slideshow\packages\
 
@@ -13,7 +13,7 @@ if %update_packages_dir% == "y" (
 )
 
 set /p update_watch_dir="WOULD YOU LIKE TO UPDATE THE WATCH_DIR VAR? (y/n) "
-if %update_watch_dir% == "y" (
+if %update_watch_dir% == y (
   echo Your watch directory will be something like:
   echo C:\Users\myuser\Dropbox\Events\BC Bowl\
 
