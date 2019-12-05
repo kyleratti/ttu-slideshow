@@ -4,7 +4,7 @@
   "description": "Full application for the TTU Sports Slideshow web-app",
   "scripts": {
     "postinstall": "lerna bootstrap",
-    "deploy": "lerna run deploy",
+    "deploy": "lerna run deploy --stream",
     "start-server": "lerna run start-server"
   },
   "repository": {
