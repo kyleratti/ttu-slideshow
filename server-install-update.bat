@@ -1,7 +1,7 @@
 @echo off
 git pull
 
-echo
+echo.
 echo VAR: API_SERVER=%api_server%
 set /p update_api_server="WOULD YOU LIKE TO UPDATE THE API_SERVER VAR? (y/n) "
 if %update_api_server% == y (  
@@ -14,7 +14,7 @@ if %update_api_server% == y (
   setx API_SERVER "%new_api_server%"
 )
 
-echo
+echo.
 echo VAR: PACKAGES_DIR=%packages_dir%
 set /p update_packages_dir="WOULD YOU LIKE TO UPDATE THE PACKAGES_DIR VAR? (y/n) "
 if %update_packages_dir% == y (  
@@ -27,7 +27,7 @@ if %update_packages_dir% == y (
   setx PACKAGES_DIR "%new_packages_dir%"
 )
 
-echo
+echo.
 echo VAR: WATCH_DIR=%watch_dir%
 set /p update_watch_dir="WOULD YOU LIKE TO UPDATE THE WATCH_DIR VAR? (y/n) "
 if %update_watch_dir% == y (
