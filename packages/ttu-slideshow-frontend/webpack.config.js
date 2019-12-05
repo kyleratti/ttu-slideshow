@@ -95,7 +95,7 @@ module.exports = {
 
     new DotenvWebpack({
       silent: true,
-      defaults: true
+      defaults: false
     }),
 
     new webpack.DefinePlugin({
