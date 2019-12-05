@@ -6,7 +6,7 @@ echo VAR: API_SERVER=%api_server%
 set /p update_api_server="WOULD YOU LIKE TO UPDATE THE API_SERVER VAR? (y/n) "
 if %update_api_server% == y (  
   echo Your API server should be something like
-  echo ws://127.0.0.1:45454
+  echo 127.0.0.1:45454
 
   set /p new_api_server="Enter API server URL: "
 
