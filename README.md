@@ -13,10 +13,10 @@ Friont-end and back-end application for the TTU Sports Slideshow website
 ## Step-by-Step
 
 1. Open `PowerShell`
-2. Navigate to a common area, i.e. `cd C:\Users\myuser\Documents\Apps\`
+2. Navigate to a common area, i.e. `cd C:\Users\myuser\Apps\`
 3. Run `git clone --depth=1 https://github.com/kyleratti/ttu-slideshow.git ttu-slideshow`
 4. Open the installation directory
-   - Probably `C:\Users\myuser\Documents\Apps\ttu-slideshow-master`
+   - Probably `C:\Users\myuser\Apps\ttu-slideshow-master`
 5. Double-click `server-install-update.bat`
    - If you get any errors, you did something above incorrectly (**or are missing a prerequisite**)
 
@@ -33,7 +33,7 @@ Once installed, usage is very straightforward.
 
 0. **If you just updated the app, you need to re-run `git pull` and `server-install-update.bat`**
 1. Open the project directory
-   - Probably `C:\Users\myuser\Documents\Apps\ttu-slideshow-master`
+   - Probably `C:\Users\myuser\Apps\ttu-slideshow`
 1. Double-click `server-start.bat`
    - Yes it's a batch file. Your IT department ~~probably~~ definitely has running `.ps1` files disabled.
 
