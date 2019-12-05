@@ -1,6 +1,7 @@
 @echo off
 git pull
 
+echo VAR: PACKAGES_DIR=%packages_dir%
 set /p update_packages_dir="WOULD YOU LIKE TO UPDATE THE PACKAGES_DIR VAR? (y/n) "
 if %update_packages_dir% == y (  
   echo Your packages directory will be something like:
@@ -12,6 +13,7 @@ if %update_packages_dir% == y (
   setx PACKAGES_DIR "%packages_dir%"
 )
 
+echo VAR: WATCH_DIR=%watch_dir%
 set /p update_watch_dir="WOULD YOU LIKE TO UPDATE THE WATCH_DIR VAR? (y/n) "
 if %update_watch_dir% == y (
   echo Your watch directory will be something like:
