@@ -20,7 +20,7 @@
     "react": "^16.10.0",
     "react-dom": "^16.10.0",
     "rimraf": "^3.0.0",
-    "ttu-slideshow-types": "file:../ttu-slideshow-types",
+    "ttu-slideshow-types": "1.0.0",
     "websocket": "^1.0.30"
   },
   "devDependencies": {
