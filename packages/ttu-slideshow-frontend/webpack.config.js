@@ -94,7 +94,7 @@ module.exports = {
     isDev && new webpack.HotModuleReplacementPlugin(),
 
     new DotenvWebpack({
-      silent: false
+      silent: true
     }),
 
     new webpack.DefinePlugin({
