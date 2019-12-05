@@ -10,7 +10,7 @@ if %update_api_server% == y (
 
   set /p new_api_server="Enter API server URL: "
 
-  set API_SERVER "%new_api_server%"
+  set API_SERVER="%new_api_server%"
   setx API_SERVER "%new_api_server%"
 )
 
@@ -23,7 +23,7 @@ if %update_packages_dir% == y (
 
   set /p new_packages_dir="Enter FULL path to packages directory: "
 
-  set PACKAGES_DIR "%new_packages_dir%"
+  set PACKAGES_DIR="%new_packages_dir%"
   setx PACKAGES_DIR "%new_packages_dir%"
 )
 
@@ -36,7 +36,7 @@ if %update_watch_dir% == y (
 
   set /p new_watch_dir="Enter FULL path to watch directory: "
 
-  set WATCH_DIR "%new_watch_dir%"
+  set WATCH_DIR="%new_watch_dir%"
   setx WATCH_DIR "%new_watch_dir%"
 )
 
