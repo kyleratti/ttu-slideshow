@@ -44,6 +44,7 @@ set NODE_ENV "PRODUCTION"
 setx NODE_ENV "PRODUCTION"
 
 call npm install
+call node ./node_modules/lerna/cli.js link --force-local
 call npm run deploy
 
 @pause
