@@ -8,6 +8,7 @@
     "clean": "rimraf lib/",
     "prebuild": "npm run clean",
     "build": "tsc -p src",
+    "deploy": "npm run build",
     "start-server": "node lib/index.js"
   },
   "author": "Kyle Ratti",
