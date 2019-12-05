@@ -29,4 +29,4 @@ setx NODE_ENV "PRODUCTION"
 npm install
 npm run deploy
 
-@pause
+pause
