@@ -4,10 +4,10 @@ git pull
 echo VAR: API_SERVER=%api_server%
 set /p update_api_server="WOULD YOU LIKE TO UPDATE THE API_SERVER VAR? (y/n) "
 if %update_api_server% == y (  
-  echo Your packages directory will be something like:
-  echo C:\Users\myuser\Apps\ttu-slideshow\packages\
+  echo Your API server should be something like
+  echo ws://127.0.0.1:45454
 
-  set /p api_server="Enter FULL path to packages directory: "
+  set /p api_server="Enter API server URL: "
 
   set API_SERVER "%api_server%"
   setx API_SERVER "%api_server%"
