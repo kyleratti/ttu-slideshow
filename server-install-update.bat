@@ -26,7 +26,7 @@ if %update_watch_dir% == y (
 set NODE_ENV "PRODUCTION"
 setx NODE_ENV "PRODUCTION"
 
-npm install
-npm run deploy
+call npm install
+call npm run deploy
 
-pause
+@pause
