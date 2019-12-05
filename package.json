@@ -5,7 +5,7 @@
   "scripts": {
     "postinstall": "lerna bootstrap",
     "deploy": "lerna run deploy --stream",
-    "start-server": "lerna run start-server"
+    "start-server": "lerna run start-server --stream"
   },
   "repository": {
     "type": "git",
