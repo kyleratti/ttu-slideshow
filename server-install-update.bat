@@ -1,4 +1,5 @@
 @echo off
+git pull
 echo Your packages directory will be something like:
 echo C:\Users\myuser\Apps\ttu-slideshow\packages\
 set /p packages_dir="Enter FULL path to packages directory:"
